@@ -5,9 +5,11 @@ public class Arrayserver
 {
     public static void main(String args[]) throws Exception
     {
+        //connection between server and client
         ServerSocket ss=new ServerSocket(1024);
         Socket s=ss.accept();
         
+        //for sending and receiving data 
         DataInputStream dis=new DataInputStream(s.getInputStream());
         DataOutputStream dos=new DataOutputStream(s.getOutputStream());
         
